@@ -3,7 +3,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('cards', { path: '/' });
+	this.resource('lists', { path: '/lists'}, function() {
+		this.resource('cards');
+	});
 });
 
 export default Router;
