@@ -1,6 +1,6 @@
 <ul>
 	{{#each}}
-		<li>
+		<li {{action 'moveCard' this}}>
 			{{title}}
 		</li>
 	{{/each}}
