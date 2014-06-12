@@ -1,9 +1,9 @@
 <h1>My Lists</h1>
 <div class="container">
-	{{#each}}
-		<div class="col-xs-4">
-			{{title}}
-			{{outlet}}
-		</div>
-	{{/each}}
+    {{#each}}
+        <div class="col-xs-4">
+            <h2>{{title}}</h2>
+            {{render 'cards' cards}}
+        </div>
+    {{/each}}
 </div>
