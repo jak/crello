@@ -19,6 +19,11 @@ Card.reopenClass({
       id: 3,
       title: "Get rich",
       list: 1
+    },
+    {
+      id: 4,
+      title: "Do some proper work",
+      list: 1
     }
   ]
 });

@@ -3,8 +3,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-	this.resource('lists', { path: '/lists'}, function() {
-		this.resource('cards');
+	this.resource('lists', { path: '/'}, function() {
+		this.resource('list', { path: '/' }, function () {
+			this.resource('cards');
+		});
 	});
 });
 
