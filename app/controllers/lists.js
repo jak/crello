@@ -3,10 +3,15 @@ var ListsController = Ember.ArrayController.extend({
         moveCard: function(card) {
             var newListNumber = prompt("hello, which list do you want to move " + card.get('title') + " card to?");
             this.store.find('list', newListNumber).then(function(list) {
-                list.set('cards', card)
+                card.set('list', list);
             });
+            card.save();
+        },
+        rename: function (card) {
+          var newName = prompt("New name for " + card.get('title'));
+          card.set('title', newName);
+          card.save();
         }
-
     }
 });
 

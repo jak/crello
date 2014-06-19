@@ -1,7 +1,9 @@
 <ul>
 	{{#each}}
-		<li {{action 'moveCard' this}}>
+		<li>
 			{{title}}
+			[ <a {{action 'moveCard' this}}>move</a> |
+			<a {{action 'rename' this}}>rename</a> ]
 		</li>
 	{{/each}}
 <ul>

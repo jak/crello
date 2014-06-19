@@ -3,7 +3,15 @@
     {{#each}}
         <div class="col-xs-4">
             <h2>{{title}}</h2>
-            {{render 'cards' cards}}
+          <ul>
+            {{#each cards}}
+              <li>
+                {{title}}
+                [ <a {{action 'moveCard' this}}>move</a> |
+                <a {{action 'rename' this}}>rename</a> ]
+              </li>
+            {{/each}}
+          <ul>
         </div>
     {{/each}}
 </div>
