@@ -1,6 +1,9 @@
 var List = DS.Model.extend({
     title: DS.attr('string'),
-    cards: DS.hasMany('card', { async: true })
+    cards: DS.hasMany('card', { async: true }),
+    domId: function() {
+      return "list" + this.get('id');
+    }.property('id')
 });
 
 List.reopenClass({

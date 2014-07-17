@@ -1,6 +1,6 @@
 <ul>
 	{{#each}}
-		<li {{action 'moveCard' this}}>
+		<li {{ bind-attr id="id" }} {{action 'moveCard' this}}>
 			{{title}}
 		</li>
 	{{/each}}
