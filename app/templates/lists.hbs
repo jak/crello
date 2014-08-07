@@ -4,7 +4,9 @@
         <div class="col-xs-4">
             <h2>{{title}}</h2>
             {{render 'cards' cards}}
-            <button {{action 'createCard' this}}>MAKE SOMETHING MAGICAL</button>
+            <form {{action "createCard" this on="submit"}}>
+            {{input type="text" id="new-card" placeholder="What's next?" value=newCardTitle}}
+            </form>
         </div>
     {{/each}}
 </div>

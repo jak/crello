@@ -8,13 +8,15 @@ var ListsController = Ember.ArrayController.extend({
             });
         },
         createCard: function (list) {
-          var title = window.prompt('Tell me something special');
+          var title = list.get('newCardTitle');
 
           var card = this.store.createRecord('card', {
             title: title
           });
           card.save();
           list.get('cards').pushObject(card);
+
+          list.set('newCardTitle', '');
         }
     }
 });
